@@ -1,0 +1,17 @@
+#similarAnnouncements{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+mat-card-content{
+  text-align: center;
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#delete{
+  background-color: red;
+}

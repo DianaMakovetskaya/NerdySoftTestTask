@@ -1,0 +1,55 @@
+
+<mat-dialog-content [formGroup]="form">
+
+  <div class="wrapper">
+    <mat-form-field>
+      <input matInput
+             placeholder="Title"
+             formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             placeholder=" Description"
+             formControlName="description">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput
+             readonly
+             placeholder="Date"
+             formControlName="date">
+    </mat-form-field>
+  </div>
+
+
+  <div *ngIf="data" id="similarAnnouncements" >
+    <div *ngFor="let announcement of similarAnnouncements">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{ announcement.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>
+            {{ announcement.description }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+  </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <div class="wrapper">
+    <div>
+      <button class="mat-raised-button" id="delete" *ngIf="data" (click)="delete()">Delete</button>
+    </div>
+    <div>
+      <button class="mat-raised-button"(click)="close()">Close</button>
+      <button class="mat-raised-button mat-primary"(click)="save()" style="margin-left: 20px">Save</button>
+    </div>
+  </div>
+
+</mat-dialog-actions>
