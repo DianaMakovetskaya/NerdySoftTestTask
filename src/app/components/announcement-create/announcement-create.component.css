@@ -15,3 +15,7 @@ mat-card-content{
 #delete{
   background-color: red;
 }
+
+h1{
+  text-align: center;
+}

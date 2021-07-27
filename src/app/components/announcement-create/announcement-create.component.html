@@ -22,6 +22,7 @@
     </mat-form-field>
   </div>
 
+<h1 *ngIf="similarAnnouncements.length">Similar Announcements</h1>
 
   <div *ngIf="data" id="similarAnnouncements" >
     <div *ngFor="let announcement of similarAnnouncements">
