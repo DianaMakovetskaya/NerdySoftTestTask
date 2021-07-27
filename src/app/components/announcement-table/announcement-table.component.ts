@@ -32,7 +32,6 @@ export class AnnouncementTableComponent implements OnInit {
   }
 
   openDialog() {
-    // const dialogConfig = new MatDialogConfig();
     let dialogRef = this.matDialog.open(AnnouncementCreateComponent,{
       width: '48%'
     });

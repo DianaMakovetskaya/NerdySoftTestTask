@@ -9,8 +9,8 @@ export class AnnouncementService {
   getAllAnnouncements() {
     return AnnouncementsList;
   }
-  createAnnouncement(config:any){
-    AnnouncementsList.push(config)
+  createAnnouncement(announcement:any){
+    AnnouncementsList.push(announcement)
   }
   deleteAnnouncement(id:string){
     let index = AnnouncementsList.findIndex(function(el:any){
@@ -18,11 +18,11 @@ export class AnnouncementService {
     })
     if (index !== -1) AnnouncementsList.splice(index, 1);
   }
-  updateAnnouncement(config:any){
+  updateAnnouncement(announcement:any){
     let index = AnnouncementsList.findIndex(function(el:any){
-      return el.configId === config.configId;
+      return el.Id === announcement.Id;
     })
-    AnnouncementsList[index]= config;
+    AnnouncementsList[index]= announcement;
   }
   getLastId(): number{
     return AnnouncementsList.length
